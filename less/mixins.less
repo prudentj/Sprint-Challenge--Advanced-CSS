@@ -1,1 +1,25 @@
 // Mixins Here
+.flex_std(){
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.button(@maincolor:gray,@seccolor:white){
+    background: @maincolor;
+    border-radius:10px;
+    color:@seccolor;
+    font-size:1.8rem;
+    padding:2%;
+    text-align: center;
+    width:25%;
+    &:hover{
+        background:@seccolor;
+        color:@maincolor;
+    }
+   @media @phone{
+       width:100%;
+       padding:5%;
+   }
+}
